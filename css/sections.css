@@ -70,25 +70,32 @@
 }
 
 .read-more {
-  display: inline-block;
-  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius-md);
   font-weight: 600;
-  position: relative;
+  transition: all var(--transition-medium);
+  text-decoration: none;
+  margin-top: var(--spacing-md);
 }
 
-.read-more::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
+.read-more:hover {
   background-color: var(--primary-color);
-  transition: var(--transition-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-.read-more:hover::after {
-  width: 100%;
+.read-more i {
+  font-size: 0.9em;
+  transition: transform var(--transition-fast);
+}
+
+.read-more:hover i {
+  transform: translateX(4px);
 }
 
 /* Resources Section */
