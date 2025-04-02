@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epic Manas - The Great Kyrgyz Epic</title>
-    <meta name="description" content="Explore the Epic Manas, one of the world's greatest and longest oral epics from Kyrgyzstan.">
+    <meta name="description" content="Explore the Epic of Manas, the world's longest oral epic and a masterpiece of Kyrgyz literature and cultural heritage.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 </head>
 <body>
     <!-- Header Section with Interactive Slideshow -->
@@ -27,17 +46,24 @@
                     <li class="dropdown">
                         <a href="#epic-parts" class="nav-link">The Epic <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="manas.html" class="dropdown-item">Manas</a></li>
-                            <li><a href="semetey.html" class="dropdown-item">Semetey</a></li>
-                            <li><a href="seytek.html" class="dropdown-item">Seytek</a></li>
+                            <li><a href="html/manas.html" class="dropdown-item">Manas</a></li>
+                            <li><a href="html/semetey.html" class="dropdown-item">Semetey</a></li>
+                            <li><a href="html/seytek.html" class="dropdown-item">Seytek</a></li>
                         </ul>
                     </li>
-                    <li><a href="#locations" class="nav-link">Locations</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">Explore <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="html/characters.html" class="dropdown-item">Characters</a></li>
+                            <li><a href="html/timeline.html" class="dropdown-item">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#cultural-significance" class="nav-link">Heritage</a></li>
+                    <li><a href="#locations" class="nav-link">Locations</a></li>
                     <li><a href="#multimedia" class="nav-link">Multimedia</a></li>
                     <li><a href="#preservation" class="nav-link">Preservation</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#resources" class="nav-link">Resources</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="mobile-nav-toggle">
@@ -108,7 +134,7 @@
                     <div class="part-content">
                         <h3 class="part-title">Manas</h3>
                         <p class="part-description">The first and main part of the trilogy focuses on Manas himself, the great warrior who united the Kyrgyz tribes against the Chinese and other external enemies. It narrates his birth, childhood, rise to leadership, battles, and eventual death.</p>
-                        <a href="manas.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="html/manas.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -118,7 +144,7 @@
                     <div class="part-content">
                         <h3 class="part-title">Semetey</h3>
                         <p class="part-description">The second part tells the story of Semetey, the son of Manas, who continues his father's legacy. After growing up in exile, he returns to reclaim his father's lands and avenge his death, facing numerous challenges and battles.</p>
-                        <a href="semetey.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="html/semetey.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -128,12 +154,136 @@
                     <div class="part-content">
                         <h3 class="part-title">Seytek</h3>
                         <p class="part-description">The third part follows Seytek, the grandson of Manas and son of Semetey. Like his father and grandfather before him, Seytek must overcome adversity and continue the heroic lineage, fighting to restore peace and unity to the Kyrgyz people.</p>
-                        <a href="seytek.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="html/seytek.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+
+    
+    <!-- Characters Section -->
+    <section id="characters" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Characters of Epic Manas</h2>
+            <div class="expandable-content">
+                <div class="preview-content">
+                    <p class="section-description">Meet the key characters that shape the Epic Manas trilogy, from legendary heroes to wise advisors and formidable adversaries...</p>
+                    <div class="character-preview-grid">
+                        <!-- Main Heroes Preview -->
+                        <div class="character-group animate-on-scroll">
+                            <h3>Main Heroes</h3>
+                            <ul class="character-list">
+                                <li>Manas - The legendary warrior and unifier</li>
+                                <li>Semetey - Son of Manas, the brave heir</li>
+                                <li>Seytek - Grandson who fulfills the legacy</li>
+                            </ul>
+                        </div>
+                        <!-- Key Allies Preview -->
+                        <div class="character-group animate-on-scroll">
+                            <h3>Key Allies</h3>
+                            <ul class="character-list">
+                                <li>Kanykei - Wise wife of Manas</li>
+                                <li>Bakai - Trusted advisor to Manas</li>
+                                <li>Almambet - Loyal friend and warrior</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="continuation-dots">. . .</div>
+                    <div class="text-center">
+                        <a href="html/characters.html" class="btn expand-btn">
+                            See Full Character List <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="characters-expanded" class="expanded-content">
+                    <div class="character-grid">
+                        <!-- Additional Character Groups -->
+                        <div class="character-group animate-on-scroll">
+                            <h3>Supporting Characters</h3>
+                            <ul class="character-list">
+                                <li>Chiyirdi - Mother of Manas</li>
+                                <li>Jakip - Father of Manas</li>
+                                <li>Ay-Churek - Wife of Semetey</li>
+                            </ul>
+                        </div>
+                        <div class="character-group animate-on-scroll">
+                            <h3>Adversaries</h3>
+                            <ul class="character-list">
+                                <li>Kongurbay - Main antagonist</li>
+                                <li>Joloy - Fierce enemy warrior</li>
+                                <li>Esen Khan - Chinese ruler</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: var(--spacing-lg);">
+                        <a href="html/characters.html" class="btn">View All Characters</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Epic Manas Timeline</h2>
+            <div class="expandable-content">
+                <div class="preview-content">
+                    <p class="section-description">Explore the chronological journey through the Epic Manas trilogy, spanning three generations of legendary heroes...</p>
+                    <div class="timeline-preview">
+                        <!-- Key Events Preview -->
+                        <div class="timeline-event animate-on-scroll">
+                            <div class="event-date">Part I</div>
+                            <div class="event-content">
+                                <h3>Birth and Rise of Manas</h3>
+                                <p>The miraculous birth of Manas and his journey to unite the Kyrgyz tribes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event animate-on-scroll">
+                            <div class="event-date">Part II</div>
+                            <div class="event-content">
+                                <h3>Semetey's Return</h3>
+                                <p>Semetey returns from exile to reclaim his father's legacy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continuation-dots">. . .</div>
+                    <div class="text-center">
+                        <a href="html/timeline.html" class="btn expand-btn">
+                            View Complete Timeline <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="timeline-expanded" class="expanded-content">
+                    <div class="timeline-preview">
+                        <div class="timeline-event animate-on-scroll">
+                            <div class="event-date">Part III</div>
+                            <div class="event-content">
+                                <h3>Seytek's Journey</h3>
+                                <p>The rise of Seytek and the fulfillment of the family's destiny.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-event animate-on-scroll">
+                            <div class="event-date">Legacy</div>
+                            <div class="event-content">
+                                <h3>Epic's Impact</h3>
+                                <p>The lasting influence of the Epic Manas on Kyrgyz culture and identity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: var(--spacing-lg);">
+                        <a href="html/timeline.html" class="btn">View Full Timeline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
     <!-- Resources Section -->
     <section id="resources" class="resources section">
@@ -152,42 +302,39 @@
                     <!-- Video 1 -->
                     <div class="video-card animate-on-scroll">
                         <div class="video-thumbnail">
-                            <img src="images/video-thumb1.jpg" alt="Epic Manas Performance">
-                            <div class="video-play"></div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/kMDklwoLf34" title="Epic of Manas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="video-info">
-                            <h4 class="video-title">Traditional Manas Performance</h4>
-                            <p class="video-meta">Duration: 15:42 • By: Kyrgyz Cultural Heritage</p>
+                            <h4 class="video-title">Epic of Manas</h4>
+                            <p class="video-meta">Epic of Manas • Traditional Performance</p>
                         </div>
                     </div>
                     
                     <!-- Video 2 -->
                     <div class="video-card animate-on-scroll">
                         <div class="video-thumbnail">
-                            <img src="images/video-thumb2.jpg" alt="The Story of Manas">
-                            <div class="video-play"></div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/kMDklwoLf34" title="Epic of Manas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="video-info">
-                            <h4 class="video-title">The Story of Manas: Explained</h4>
-                            <p class="video-meta">Duration: 22:18 • By: World Epics Channel</p>
+                            <h4 class="video-title">Epic of Manas</h4>
+                            <p class="video-meta">Epic of Manas • Traditional Performance</p>
                         </div>
                     </div>
                     
                     <!-- Video 3 -->
                     <div class="video-card animate-on-scroll">
                         <div class="video-thumbnail">
-                            <img src="images/video-thumb3.jpg" alt="Manas Epic Documentary">
-                            <div class="video-play"></div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/kMDklwoLf34" title="Epic of Manas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="video-info">
-                            <h4 class="video-title">Manas: The Epic That Defined a Nation</h4>
-                            <p class="video-meta">Duration: 45:27 • By: Historical Documentaries</p>
+                            <h4 class="video-title">Epic of Manas</h4>
+                            <p class="video-meta">Epic of Manas • Traditional Performance</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="text-center" style="margin-top: var(--spacing-xl);">
-                    <a href="videos.html" class="btn">View All Videos</a>
+                    <a href="https://www.youtube.com/results?search_query=epic+of+manas" target="_blank" class="btn">View More Videos <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             
@@ -271,125 +418,7 @@
         </div>
     </section>
     
-    <!-- Characters Section -->
-    <section id="characters" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Characters of Epic Manas</h2>
-            <div class="expandable-content">
-                <div class="preview-content">
-                    <p class="section-description">Meet the key characters that shape the Epic Manas trilogy, from legendary heroes to wise advisors and formidable adversaries...</p>
-                    <div class="character-preview-grid">
-                        <!-- Main Heroes Preview -->
-                        <div class="character-group animate-on-scroll">
-                            <h3>Main Heroes</h3>
-                            <ul class="character-list">
-                                <li>Manas - The legendary warrior and unifier</li>
-                                <li>Semetey - Son of Manas, the brave heir</li>
-                                <li>Seytek - Grandson who fulfills the legacy</li>
-                            </ul>
-                        </div>
-                        <!-- Key Allies Preview -->
-                        <div class="character-group animate-on-scroll">
-                            <h3>Key Allies</h3>
-                            <ul class="character-list">
-                                <li>Kanykei - Wise wife of Manas</li>
-                                <li>Bakai - Trusted advisor to Manas</li>
-                                <li>Almambet - Loyal friend and warrior</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="continuation-dots">. . .</div>
-                    <div class="text-center">
-                        <a href="characters.html" class="btn expand-btn">
-                            See Full Character List <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div id="characters-expanded" class="expanded-content">
-                    <div class="character-grid">
-                        <!-- Additional Character Groups -->
-                        <div class="character-group animate-on-scroll">
-                            <h3>Supporting Characters</h3>
-                            <ul class="character-list">
-                                <li>Chiyirdi - Mother of Manas</li>
-                                <li>Jakip - Father of Manas</li>
-                                <li>Ay-Churek - Wife of Semetey</li>
-                            </ul>
-                        </div>
-                        <div class="character-group animate-on-scroll">
-                            <h3>Adversaries</h3>
-                            <ul class="character-list">
-                                <li>Kongurbay - Main antagonist</li>
-                                <li>Joloy - Fierce enemy warrior</li>
-                                <li>Esen Khan - Chinese ruler</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="text-center" style="margin-top: var(--spacing-lg);">
-                        <a href="characters.html" class="btn">View All Characters</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Timeline Section -->
-    <section id="timeline" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Epic Manas Timeline</h2>
-            <div class="expandable-content">
-                <div class="preview-content">
-                    <p class="section-description">Explore the chronological journey through the Epic Manas trilogy, spanning three generations of legendary heroes...</p>
-                    <div class="timeline-preview">
-                        <!-- Key Events Preview -->
-                        <div class="timeline-event animate-on-scroll">
-                            <div class="event-date">Part I</div>
-                            <div class="event-content">
-                                <h3>Birth and Rise of Manas</h3>
-                                <p>The miraculous birth of Manas and his journey to unite the Kyrgyz tribes.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-event animate-on-scroll">
-                            <div class="event-date">Part II</div>
-                            <div class="event-content">
-                                <h3>Semetey's Return</h3>
-                                <p>Semetey returns from exile to reclaim his father's legacy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="continuation-dots">. . .</div>
-                    <div class="text-center">
-                        <a href="timeline.html" class="btn expand-btn">
-                            View Complete Timeline <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div id="timeline-expanded" class="expanded-content">
-                    <div class="timeline-preview">
-                        <div class="timeline-event animate-on-scroll">
-                            <div class="event-date">Part III</div>
-                            <div class="event-content">
-                                <h3>Seytek's Journey</h3>
-                                <p>The rise of Seytek and the fulfillment of the family's destiny.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-event animate-on-scroll">
-                            <div class="event-date">Legacy</div>
-                            <div class="event-content">
-                                <h3>Epic's Impact</h3>
-                                <p>The lasting influence of the Epic Manas on Kyrgyz culture and identity.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center" style="margin-top: var(--spacing-lg);">
-                        <a href="timeline.html" class="btn">View Full Timeline</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="section">
@@ -672,12 +701,12 @@
                     <h3>Performance Recordings</h3>
                     <div class="video-items">
                         <div class="video-item">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
-                            <p>Modern Manaschi Performance</p>
+                            <iframe src="https://www.youtube.com/embed/kMDklwoLf34" title="Epic of Manas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>Epic of Manas • Traditional Performance</p>
                         </div>
                         <div class="video-item">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
-                            <p>Traditional Epic Recitation</p>
+                            <iframe src="https://www.youtube.com/embed/kMDklwoLf34" title="Epic of Manas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>Epic of Manas • Traditional Performance</p>
                         </div>
                     </div>
                 </div>
@@ -747,809 +776,8 @@
         </div>
     </section>
 
-    <style>
-        /* Expandable Content Styles */
-        .expandable-content {
-            margin-top: var(--spacing-lg);
-        }
 
-        .preview-content {
-            margin-bottom: var(--spacing-xl);
-        }
 
-        .expanded-content {
-            display: none;
-            margin-top: var(--spacing-lg);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .expanded-content.active {
-            display: block;
-        }
-
-        .expand-btn {
-            margin: var(--spacing-lg) 0;
-        }
-
-        .expand-btn i {
-            transition: transform 0.3s ease;
-            margin-left: var(--spacing-sm);
-        }
-
-        .expand-btn.active i {
-            transform: rotate(180deg);
-        }
-
-        /* Character Styles */
-        .character-preview-grid,
-        .character-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin: var(--spacing-lg) 0;
-        }
-
-        .character-group {
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .character-group h3 {
-            color: var(--heading-color);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .character-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .character-list li {
-            margin-bottom: var(--spacing-sm);
-            padding-left: var(--spacing-md);
-            position: relative;
-        }
-
-        .character-list li::before {
-            content: '•';
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-        }
-
-        /* Timeline Styles */
-        .timeline-preview {
-            margin: var(--spacing-lg) 0;
-        }
-
-        .timeline-event {
-            display: flex;
-            margin-bottom: var(--spacing-lg);
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .event-date {
-            flex: 0 0 100px;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .event-content {
-            flex: 1;
-        }
-
-        .event-content h3 {
-            color: var(--heading-color);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .event-content p {
-            margin: 0;
-            color: var(--text-color);
-        }
-
-        /* Add this to your existing styles */
-        .continuation-dots {
-            text-align: center;
-            font-size: 24px;
-            color: var(--accent-color);
-            margin: var(--spacing-lg) 0;
-            letter-spacing: 4px;
-        }
-
-        /* FAQ Styles */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: var(--spacing-md);
-            background: var(--white);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: var(--spacing-lg);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .faq-question:hover {
-            background-color: var(--bg-light);
-        }
-
-        .faq-question h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--heading-color);
-        }
-
-        .faq-question i {
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding: 0 var(--spacing-lg);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: var(--spacing-lg);
-            max-height: 500px;
-        }
-
-        /* Cultural Significance Styles */
-        .significance-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-xl);
-        }
-
-        .significance-card {
-            background: var(--white);
-            padding: var(--spacing-xl);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-
-        .significance-card i {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: var(--spacing-md);
-        }
-
-        /* Map Styles */
-        .map-container {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-xl);
-        }
-
-        .map-navigation {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            position: relative;
-        }
-
-        .interactive-map {
-            height: 400px;
-            flex-grow: 1;
-            border-radius: var(--border-radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav-btn {
-            background: var(--white);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.3s, background-color 0.3s;
-            z-index: 1;
-        }
-
-        .nav-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-            transform: scale(1.1);
-        }
-
-        .location-list {
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .location-dots {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .location-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--border-color);
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .location-dot:hover {
-            transform: scale(1.2);
-        }
-
-        .location-dot.active {
-            background-color: var(--primary-color);
-        }
-
-        .location-info {
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .location-info.active {
-            display: block;
-        }
-
-        .location-meta {
-            margin-top: var(--spacing-md);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .location-meta i {
-            color: var(--accent-color);
-            margin-right: var(--spacing-sm);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            .map-navigation {
-                flex-direction: column;
-            }
-
-            .nav-btn {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            .nav-btn.prev {
-                left: 10px;
-            }
-
-            .nav-btn.next {
-                right: 10px;
-            }
-        }
-
-        /* Add this to your existing styles */
-        .location-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-lg);
-            justify-content: center;
-        }
-
-        .location-btn {
-            background: var(--white);
-            border: 2px solid var(--border-color);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--border-radius-sm);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            transition: all 0.3s ease;
-            color: var(--text-color);
-            font-size: 0.9rem;
-        }
-
-        .location-btn i {
-            color: var(--accent-color);
-            font-size: 1rem;
-        }
-
-        .location-btn:hover {
-            background: var(--bg-light);
-            transform: translateY(-2px);
-            border-color: var(--accent-color);
-        }
-
-        .location-btn.active {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
-        }
-
-        .location-btn.active i {
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            .location-buttons {
-                gap: var(--spacing-xs);
-            }
-
-            .location-btn {
-                font-size: 0.8rem;
-                padding: var(--spacing-xs) var(--spacing-sm);
-            }
-        }
-
-        /* Add this to your existing styles */
-        @media (max-width: 1200px) {
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: var(--spacing-sm);
-            }
-
-            .nav-link {
-                padding: var(--spacing-xs) var(--spacing-sm);
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                padding: var(--spacing-md);
-            }
-
-            .nav-links {
-                display: none;
-                width: 100%;
-                padding: var(--spacing-md) 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: var(--spacing-md);
-            }
-
-            .mobile-nav-toggle {
-                display: block;
-            }
-
-            .nav-link {
-                padding: var(--spacing-sm);
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        /* Add dropdown styles */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--white);
-            min-width: 180px;
-            border-radius: var(--border-radius-sm);
-            box-shadow: var(--shadow-md);
-            z-index: 1000;
-            padding: var(--spacing-sm) 0;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .dropdown-item {
-            display: block;
-            padding: var(--spacing-sm) var(--spacing-lg);
-            color: var(--text-color);
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .dropdown-item:hover {
-            background-color: var(--bg-light);
-            color: var(--primary-color);
-        }
-
-        .dropdown .fa-chevron-down {
-            font-size: 0.8em;
-            margin-left: var(--spacing-xs);
-            transition: transform 0.3s;
-        }
-
-        .dropdown:hover .fa-chevron-down {
-            transform: rotate(180deg);
-        }
-
-        @media (max-width: 768px) {
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background: var(--bg-light);
-                margin: var(--spacing-sm) 0;
-                padding: 0;
-            }
-
-            .dropdown-item {
-                padding: var(--spacing-sm) var(--spacing-xl);
-            }
-        }
-
-        /* Multimedia Gallery Styles */
-        .multimedia-grid {
-            display: grid;
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .gallery-category {
-            background: var(--white);
-            border-radius: var(--border-radius-md);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .gallery-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-
-        .gallery-item {
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: var(--border-radius-sm);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: var(--white);
-            padding: var(--spacing-sm);
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        .video-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
-        }
-
-        .video-item {
-            aspect-ratio: 16/9;
-        }
-
-        .video-item iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: var(--border-radius-sm);
-        }
-
-        /* Tourism Styles */
-        .tourism-grid {
-            display: grid;
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .tourism-card {
-            background: var(--white);
-            border-radius: var(--border-radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-
-        .tourism-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .tourism-content {
-            padding: var(--spacing-lg);
-        }
-
-        .tourism-details {
-            list-style: none;
-            padding: 0;
-        }
-
-        .tourism-details li {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .tourism-details li i {
-            color: var(--primary-color);
-            width: 20px;
-        }
-
-        .travel-tips-box {
-            margin-top: var(--spacing-xl);
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .travel-tips-box h3 {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .travel-tips-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-        }
-
-        .travel-tips-grid li {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-
-        .travel-tips-grid li i {
-            color: var(--accent-color);
-        }
-
-        @media (max-width: 768px) {
-            .travel-tips-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Preservation Styles */
-        .preservation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .preservation-card {
-            background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .preservation-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .preservation-initiatives {
-            grid-column: 1 / -1;
-            background: var(--bg-light);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md);
-        }
-
-        .initiative-timeline {
-            margin-top: var(--spacing-md);
-        }
-
-        .initiative-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md) 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .initiative-item:last-child {
-            border-bottom: none;
-        }
-
-        .initiative-date {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 768px) {
-            .tourism-grid,
-            .preservation-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .video-items {
-                grid-template-columns: 1fr;
-            }
-
-            .initiative-item {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-xs);
-            }
-        }
-
-        /* Update button styles to include icon */
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-
-        .btn-secondary i {
-            font-size: 0.9em;
-        }
-    </style>
-
-    <!-- Add this before the closing </head> tag -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
-
-    <!-- Add this to your existing script section -->
-    <script>
-        // Location data
-        const locations = [
-            {
-                name: 'Talas Valley',
-                position: { lat: 42.5200, lng: 72.2400 },
-                zoom: 11
-            },
-            {
-                name: 'Ala-Too Mountains',
-                position: { lat: 42.5000, lng: 74.5000 },
-                zoom: 10
-            },
-            {
-                name: 'Issyk-Kul Lake',
-                position: { lat: 42.4500, lng: 77.1500 },
-                zoom: 9
-            },
-            {
-                name: 'Naryn Region',
-                position: { lat: 41.4300, lng: 76.0000 },
-                zoom: 10
-            },
-            {
-                name: 'Suusamyr Valley',
-                position: { lat: 42.2400, lng: 73.3000 },
-                zoom: 11
-            }
-        ];
-
-        let currentLocationIndex = 0;
-        let map;
-        let marker;
-
-        // Initialize Google Maps
-        function initMap() {
-            const mapOptions = {
-                center: locations[0].position,
-                zoom: locations[0].zoom,
-                mapTypeId: 'terrain',
-                styles: [
-                    {
-                        featureType: 'all',
-                        elementType: 'geometry',
-                        stylers: [{ color: '#ebe3cd' }]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'geometry',
-                        stylers: [{ color: '#b9d3c2' }]
-                    }
-                    // Add more custom styles as needed
-                ]
-            };
-
-            map = new google.maps.Map(document.getElementById('epic-map'), mapOptions);
-            marker = new google.maps.Marker({
-                position: locations[0].position,
-                map: map,
-                animation: google.maps.Animation.DROP
-            });
-
-            showLocation(0);
-        }
-
-        function showLocation(index) {
-            currentLocationIndex = index;
-            
-            // Update map
-            map.panTo(locations[index].position);
-            map.setZoom(locations[index].zoom);
-            marker.setPosition(locations[index].position);
-            
-            // Update UI
-            document.querySelectorAll('.location-info').forEach(info => {
-                info.classList.remove('active');
-            });
-            document.querySelectorAll('.location-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            document.querySelectorAll('.location-btn').forEach((btn, i) => {
-                btn.classList.toggle('active', i === index);
-            });
-            document.querySelectorAll('.location-info')[index].classList.add('active');
-        }
-
-        function nextLocation() {
-            const nextIndex = (currentLocationIndex + 1) % locations.length;
-            showLocation(nextIndex);
-        }
-
-        function previousLocation() {
-            const prevIndex = (currentLocationIndex - 1 + locations.length) % locations.length;
-            showLocation(prevIndex);
-        }
-
-        // Initialize map when the page loads
-        window.addEventListener('load', initMap);
-    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1588,11 +816,11 @@
                 <div class="footer-links-column">
                     <h3 class="footer-title">Epic Parts</h3>
                     <ul class="footer-links">
-                        <li class="footer-link"><a href="manas.html">Manas</a></li>
-                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
-                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
-                        <li class="footer-link"><a href="characters.html">Characters</a></li>
-                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                        <li class="footer-link"><a href="html/manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="html/semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="html/seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="html/characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="html/timeline.html">Timeline</a></li>
                     </ul>
                 </div>
                 
@@ -1614,5 +842,6 @@
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
 </body>
 </html> 
