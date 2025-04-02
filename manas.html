@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas - The First Part of Epic Manas</title>
+    <meta name="description" content="Learn about Manas, the main hero and first part of the Epic Manas trilogy from Kyrgyzstan.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Page-specific styles */
+        .hero-banner {
+            height: 500px;
+            background-image: url('images/manas-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background-color: var(--light-accent);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .section-image {
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .quote {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--primary-color);
+            position: relative;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            background-color: rgba(212, 167, 106, 0.1);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+        
+        .character-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-medium);
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .character-content {
+            padding: var(--spacing-md);
+        }
+        
+        .character-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .character-description {
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <nav class="nav" style="position: fixed; background: var(--primary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Epic Manas</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#epic-parts" class="nav-link">The Epic</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Manas</h1>
+            <p class="hero-subtitle">The First Part of the Epic Trilogy</p>
+        </div>
+    </div>
+    
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">The Legend of Manas</h2>
+            <p class="animate-on-scroll">The first and main part of the epic trilogy focuses on Manas, the great warrior who united the Kyrgyz tribes against external enemies. This part of the epic is the most extensive and widely known, containing over 80,000 lines of poetry when written down.</p>
+            
+            <div class="quote animate-on-scroll">
+                "The lion Manas is coming! The hero with a strong spirit, who can stand against him?"
+            </div>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Birth and Childhood</h3>
+                    <p>According to the epic, Manas was born to Jakıp Bey and his wife Chıyrıchı. His birth was said to be miraculous, accompanied by numerous omens and signs. As a child, Manas demonstrated extraordinary strength, bravery, and leadership qualities that set him apart from his peers.</p>
+                    <p>By the age of nine, Manas was already showing signs of his future greatness. He gathered a small army of forty companions (known as "choro") who would later become his loyal warriors. Even in childhood games, Manas demonstrated his natural ability to lead and inspire others.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/manas-childhood.jpg" alt="Childhood of Manas">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Achievements Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Unifying the Kyrgyz Tribes</h2>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/manas-battle.jpg" alt="Manas in Battle">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>Military Campaigns</h3>
+                    <p>One of Manas's greatest achievements was unifying the scattered Kyrgyz tribes into a single nation. According to the epic, he led his people against numerous enemies, particularly the Oirats and Chinese, who threatened the freedom and existence of the Kyrgyz people.</p>
+                    <p>Manas's military campaigns were characterized by his brilliant strategy, personal courage, and the loyalty of his forty companions. His victories helped establish a strong Kyrgyz state and expanded their territory significantly.</p>
+                </div>
+            </div>
+            
+            <div class="two-column" style="margin-top: var(--spacing-xl);">
+                <div class="section-text animate-on-scroll">
+                    <h3>Wisdom and Leadership</h3>
+                    <p>Beyond his military prowess, Manas was also celebrated for his wisdom, fairness, and strong leadership. He established a code of justice and honor that governed his people, emphasizing unity, courage, hospitality, and respect for traditions.</p>
+                    <p>Manas's court at Talas became a center of Kyrgyz culture and power, where he ruled with the counsel of his wise advisors and the support of his loyal warriors.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/manas-court.jpg" alt="Manas Court">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Characters Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Key Characters in Manas</h2>
+            <p class="text-center animate-on-scroll">The epic of Manas features a rich cast of characters who play important roles in the hero's life and adventures.</p>
+            
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kanykei.jpg" alt="Kanykei" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kanykei</h3>
+                        <p class="character-description">Manas's wise and noble wife, known for her intelligence, loyalty, and healing abilities. She often saved Manas and his warriors from peril with her foresight and medicinal knowledge.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/bakai.jpg" alt="Bakai" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Bakai</h3>
+                        <p class="character-description">Manas's wise counselor and uncle, who guided the hero with his wisdom and experience. Bakai represents the importance of sound advice and strategic thinking.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/almambet.jpg" alt="Almambet" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Almambet</h3>
+                        <p class="character-description">Originally a Chinese warrior who became one of Manas's closest friends and most trusted commanders after converting to Islam and joining the Kyrgyz cause.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/chubak.jpg" alt="Chubak" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Chubak</h3>
+                        <p class="character-description">A fearless warrior known for his strength and courage, who became one of Manas's most loyal companions and fought alongside him in many battles.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 5 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/syrghak.jpg" alt="Syrghak" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Syrghak</h3>
+                        <p class="character-description">A young and agile warrior known for his speed and reconnaissance skills, who often served as Manas's scout during military campaigns.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 6 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/koshoi.jpg" alt="Koshoi" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Koshoi</h3>
+                        <p class="character-description">An elderly giant and experienced warrior who represented wisdom and traditional Kyrgyz wrestling prowess, serving as a mentor figure to Manas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Death and Legacy Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Death and Legacy</h2>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>The Hero's End</h3>
+                    <p>Despite his seemingly invincible nature, Manas was not immortal. According to the epic, he was mortally wounded through treachery. On his deathbed, he gave final instructions to his wife Kanykei and expressed concern for his son Semetey, who was still an infant.</p>
+                    <p>Manas's funeral was conducted with great ceremony, befitting his status as the greatest Kyrgyz hero. His body was interred in a secret location to prevent desecration by enemies.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/manas-memorial.jpg" alt="Manas Memorial">
+                </div>
+            </div>
+            
+            <div class="quote animate-on-scroll">
+                "Though my body may perish, my spirit will remain with the Kyrgyz people as long as they remember my name and follow my example."
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <a href="semetey.html" class="btn animate-on-scroll">Continue to Semetey <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Epic Manas</div>
+                    <p class="footer-description">Exploring and preserving the rich cultural heritage of the great Kyrgyz epic poem, one of the world's longest oral epics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="index.html#about">About</a></li>
+                        <li class="footer-link"><a href="index.html#epic-parts">The Epic</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Resources</a></li>
+                        <li class="footer-link"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Epic Parts</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@epicmanas.org">info@epicmanas.org</a></li>
+                        <li class="footer-link"><a href="tel:+996312123456">+996 312 123456</a></li>
+                        <li class="footer-link"><a href="#">Bishkek, Kyrgyzstan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Epic Manas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters of Epic Manas - The Great Kyrgyz Epic</title>
+    <meta name="description" content="Explore the major characters from the Epic Manas trilogy, including heroes, allies, and adversaries from all three parts of the epic.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Page-specific styles */
+        .hero-banner {
+            height: 400px;
+            background-image: url('images/characters-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+        
+        .character-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--light-accent);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition-medium);
+        }
+        
+        .filter-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .character-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-medium);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .character-content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .character-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--heading-color);
+        }
+        
+        .character-subtitle {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+        
+        .character-description {
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+        
+        .character-affiliation {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: 600;
+            margin-top: auto;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -15px;
+            left: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .character-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <nav class="nav" style="position: fixed; background: var(--primary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Epic Manas</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#epic-parts" class="nav-link">The Epic</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Characters of Epic Manas</h1>
+            <p class="hero-subtitle">The heroes, allies, and adversaries who shape the legendary epic</p>
+        </div>
+    </div>
+    
+    <!-- Main Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                <p>The Epic of Manas features a rich cast of characters across its three parts, from valiant heroes and wise advisors to formidable enemies and supernatural beings. Explore the key figures who shape this monumental saga spanning three generations.</p>
+            </div>
+            
+            <div class="character-filters">
+                <button class="filter-btn active" data-filter="all">All Characters</button>
+                <button class="filter-btn" data-filter="manas">Manas (Part 1)</button>
+                <button class="filter-btn" data-filter="semetey">Semetey (Part 2)</button>
+                <button class="filter-btn" data-filter="seytek">Seytek (Part 3)</button>
+                <button class="filter-btn" data-filter="heroes">Heroes & Allies</button>
+                <button class="filter-btn" data-filter="adversaries">Adversaries</button>
+            </div>
+            
+            <!-- Manas Characters Section -->
+            <h2 class="section-title animate-on-scroll">Heroes of the First Part: Manas</h2>
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll" data-category="manas heroes">
+                    <img src="images/manas-character.jpg" alt="Manas" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Manas</h3>
+                        <p class="character-subtitle">The Great Hero</p>
+                        <p class="character-description">The central hero of the epic and a legendary warrior who unites the forty Kyrgyz tribes. Known for his exceptional strength, courage, and leadership, Manas establishes the first Kyrgyz state and defends his people against numerous enemies.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-shield-alt" style="color: var(--primary-color);"></i>
+                            <span>Kyrgyz Leader</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll" data-category="manas heroes">
+                    <img src="images/kanykei.jpg" alt="Kanykei" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kanykei</h3>
+                        <p class="character-subtitle">Wise Wife of Manas</p>
+                        <p class="character-description">Manas's beloved wife, renowned for her intelligence, wisdom, and healing abilities. She often saves Manas and his warriors with her foresight and medicinal knowledge, and later protects their son Semetey after Manas's death.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-heart" style="color: var(--accent-color);"></i>
+                            <span>Royal Family</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll" data-category="manas heroes">
+                    <img src="images/bakai.jpg" alt="Bakai" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Bakai</h3>
+                        <p class="character-subtitle">Wise Counselor</p>
+                        <p class="character-description">Manas's wise uncle and chief advisor, who guides the hero with his wisdom and experience. Bakai represents the importance of sound advice and strategic thinking, and later serves as a mentor to both Semetey and Seytek.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-book" style="color: var(--tertiary-color);"></i>
+                            <span>Royal Advisor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll" data-category="manas heroes">
+                    <img src="images/almambet.jpg" alt="Almambet" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Almambet</h3>
+                        <p class="character-subtitle">Loyal Friend</p>
+                        <p class="character-description">Originally a Chinese warrior who becomes one of Manas's closest friends and most trusted commanders after converting to Islam and joining the Kyrgyz cause. His strategic mind and battlefield prowess make him invaluable to Manas.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-shield-alt" style="color: var(--primary-color);"></i>
+                            <span>Warrior Commander</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 5 -->
+                <div class="character-card animate-on-scroll" data-category="manas adversaries">
+                    <img src="images/konurbai.jpg" alt="Konurbai" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Konurbai</h3>
+                        <p class="character-subtitle">Formidable Enemy</p>
+                        <p class="character-description">One of Manas's main adversaries, a powerful and cunning Kalmyk leader who opposes the Kyrgyz hero throughout his campaigns. His conflict with Manas's lineage spans generations, continuing into the stories of Semetey and Seytek.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-skull" style="color: #c0392b;"></i>
+                            <span>Enemy Leader</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 6 -->
+                <div class="character-card animate-on-scroll" data-category="manas heroes">
+                    <img src="images/chubak.jpg" alt="Chubak" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Chubak</h3>
+                        <p class="character-subtitle">Brave Warrior</p>
+                        <p class="character-description">A fearless warrior known for his strength and courage, who became one of Manas's most loyal companions and fought alongside him in many battles. His physical prowess and unwavering loyalty make him one of Manas's most valued allies.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-fist-raised" style="color: var(--tertiary-color);"></i>
+                            <span>Elite Warrior</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Semetey Characters Section -->
+            <h2 class="section-title animate-on-scroll">Heroes of the Second Part: Semetey</h2>
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll" data-category="semetey heroes">
+                    <img src="images/semetey-character.jpg" alt="Semetey" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Semetey</h3>
+                        <p class="character-subtitle">Son of Manas</p>
+                        <p class="character-description">The son of Manas and Kanykei, who continues his father's legacy. Raised in exile, he returns to reclaim his father's lands and avenge his death, facing numerous challenges and battles to restore the Kyrgyz state established by Manas.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-shield-alt" style="color: var(--primary-color);"></i>
+                            <span>Kyrgyz Prince</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll" data-category="semetey heroes">
+                    <img src="images/aikchurek.jpg" alt="Aikchurek" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Aikchurek</h3>
+                        <p class="character-subtitle">Magical Princess</p>
+                        <p class="character-description">Semetey's beautiful and intelligent wife, who possesses magical abilities and supports her husband in his quests. Their love story forms an important subplot in the epic, and she later becomes the mother of Seytek.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-magic" style="color: var(--secondary-color);"></i>
+                            <span>Royal Family</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll" data-category="semetey heroes">
+                    <img src="images/kulchoro.jpg" alt="Kulchoro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kulchoro</h3>
+                        <p class="character-subtitle">Loyal Companion</p>
+                        <p class="character-description">Son of Almambet (Manas's close friend) and Semetey's loyal companion, who fights alongside him in many battles. Their friendship mirrors the bond between their fathers and provides crucial support to Semetey's campaigns.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-hand-rock" style="color: var(--tertiary-color);"></i>
+                            <span>Elite Warrior</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll" data-category="semetey adversaries">
+                    <img src="images/kanchooro.jpg" alt="Kanchooro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kanchooro</h3>
+                        <p class="character-subtitle">The Betrayer</p>
+                        <p class="character-description">Initially one of Semetey's companions who eventually betrays him, representing the theme of treachery and the challenges of leadership. His betrayal leads to Semetey's downfall or exile, threatening the lineage of Manas.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-user-secret" style="color: #c0392b;"></i>
+                            <span>Traitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seytek Characters Section -->
+            <h2 class="section-title animate-on-scroll">Heroes of the Third Part: Seytek</h2>
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll" data-category="seytek heroes">
+                    <img src="images/seytek-character.jpg" alt="Seytek" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Seytek</h3>
+                        <p class="character-subtitle">Grandson of Manas</p>
+                        <p class="character-description">The son of Semetey and Aikchurek, and grandson of Manas. Following the disappearance of his father, Seytek must overcome adversity, reclaim his family's legacy, and continue the heroic lineage, bringing peace and unity to the Kyrgyz people.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-crown" style="color: var(--secondary-color);"></i>
+                            <span>Kyrgyz Prince</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll" data-category="seytek heroes">
+                    <img src="images/aichuruk.jpg" alt="Aichuruk" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Aichuruk</h3>
+                        <p class="character-subtitle">Loyal Wife</p>
+                        <p class="character-description">Seytek's wife, known for her beauty, intelligence, and loyalty. She supports Seytek in his endeavors and plays a crucial role in diplomatic relations with other tribes, continuing the tradition of strong female characters in the epic.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-heart" style="color: var(--accent-color);"></i>
+                            <span>Royal Family</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll" data-category="seytek heroes">
+                    <img src="images/kulchoro-older.jpg" alt="Older Kulchoro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Elder Kulchoro</h3>
+                        <p class="character-subtitle">Wise Mentor</p>
+                        <p class="character-description">Now older, Kulchoro serves as a mentor and advisor to Seytek, providing guidance and wisdom based on his experiences with previous generations. His connection to both Manas and Semetey makes him a living link to the past.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-book" style="color: var(--tertiary-color);"></i>
+                            <span>Royal Advisor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll" data-category="seytek adversaries">
+                    <img src="images/kyzyl-surt.jpg" alt="Kyzyl Surt" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kyzyl Surt</h3>
+                        <p class="character-subtitle">Primary Antagonist</p>
+                        <p class="character-description">Seytek's main adversary, a powerful warlord who seeks to destroy the line of Manas once and for all and establish his own dynasty as rulers of the Kyrgyz. His defeat represents Seytek's final triumph over the enemies of his lineage.</p>
+                        <div class="character-affiliation">
+                            <i class="fas fa-skull" style="color: #c0392b;"></i>
+                            <span>Enemy Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Epic Manas</div>
+                    <p class="footer-description">Exploring and preserving the rich cultural heritage of the great Kyrgyz epic poem, one of the world's longest oral epics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="index.html#about">About</a></li>
+                        <li class="footer-link"><a href="index.html#epic-parts">The Epic</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Resources</a></li>
+                        <li class="footer-link"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Epic Parts</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@epicmanas.org">info@epicmanas.org</a></li>
+                        <li class="footer-link"><a href="tel:+996312123456">+996 312 123456</a></li>
+                        <li class="footer-link"><a href="#">Bishkek, Kyrgyzstan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Epic Manas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Character filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const characterCards = document.querySelectorAll('.character-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.dataset.filter;
+                    
+                    // Filter character cards
+                    characterCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.dataset.category.split(' ');
+                            if (categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

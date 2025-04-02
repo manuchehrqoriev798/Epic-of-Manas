@@ -1,0 +1,43 @@
+:root {
+  /* Color Palette */
+  --primary-color: #4a2511; /* Rich brown for Epic Manas theme */
+  --secondary-color: #d4a76a; /* Gold accent */
+  --tertiary-color: #8b5d33; /* Medium brown */
+  --background-color: #f9f5f0; /* Light cream background */
+  --text-color: #333333; /* Dark gray for text */
+  --heading-color: #3a1e0e; /* Darker brown for headings */
+  --accent-color: #c0392b; /* Red accent for highlights */
+  --light-accent: #e8d5b5; /* Light gold for subtle accents */
+  --white: #ffffff;
+  --black: #000000;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 4rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Box Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
+  /* Container Width */
+  --container-width: 1200px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+} 

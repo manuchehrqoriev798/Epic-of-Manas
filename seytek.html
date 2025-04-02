@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seytek - The Third Part of Epic Manas</title>
+    <meta name="description" content="Learn about Seytek, the grandson of Manas and third part of the Epic Manas trilogy from Kyrgyzstan.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Page-specific styles */
+        .hero-banner {
+            height: 500px;
+            background-image: url('images/seytek-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background-color: var(--light-accent);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .section-image {
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .quote {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--primary-color);
+            position: relative;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            background-color: rgba(212, 167, 106, 0.1);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+        
+        .character-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-medium);
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .character-content {
+            padding: var(--spacing-md);
+        }
+        
+        .character-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .character-description {
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <nav class="nav" style="position: fixed; background: var(--primary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Epic Manas</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#epic-parts" class="nav-link">The Epic</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Seytek</h1>
+            <p class="hero-subtitle">The Third Part of the Epic Trilogy</p>
+        </div>
+    </div>
+    
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">The Legacy Continues</h2>
+            <p class="animate-on-scroll">The third and final part of the Epic Manas trilogy centers on Seytek, the grandson of Manas and son of Semetey. Like his father and grandfather before him, Seytek must navigate a world of alliances, betrayals, and conflicts while upholding the noble lineage of the great Manas.</p>
+            
+            <div class="quote animate-on-scroll">
+                "Three generations of heroes, one unbroken line. In Seytek, the spirit of Manas lives on, guiding the Kyrgyz people through times of darkness."
+            </div>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Early Challenges</h3>
+                    <p>Seytek's story begins with adversity. After his father Semetey disappears or is exiled, young Seytek is left vulnerable to those who wish to end the line of Manas forever. As a child, he is hidden away and raised in secrecy by loyal supporters who protect him from enemies seeking to eliminate the last of Manas's bloodline.</p>
+                    <p>Even as a young boy, Seytek shows signs of exceptional abilities and the heroic qualities that marked both his father and grandfather. Despite his sheltered upbringing, his heritage cannot be concealed as he grows into a young man of extraordinary strength and character.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-childhood.jpg" alt="Childhood of Seytek">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Coming of Age Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Coming of Age</h2>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-discovery.jpg" alt="Seytek Learning His Identity">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>Discovery of Heritage</h3>
+                    <p>As Seytek reaches adolescence, he learns the truth about his noble lineage and the heroic deeds of his father and grandfather. This revelation awakens within him a sense of duty and purpose, and he vows to continue their legacy of leadership and protection of the Kyrgyz people.</p>
+                    <p>Like his father before him, Seytek must reclaim his birthright from those who have usurped power in the absence of the rightful heir. His journey of self-discovery is also a journey toward his destiny as the next great leader of his people.</p>
+                </div>
+            </div>
+            
+            <div class="two-column" style="margin-top: var(--spacing-xl);">
+                <div class="section-text animate-on-scroll">
+                    <h3>Tests and Trials</h3>
+                    <p>Before Seytek can assume his rightful place as leader, he must prove himself worthy through various tests and trials. These challenges test not only his physical strength and courage but also his wisdom, compassion, and sense of justice—qualities essential for a true leader.</p>
+                    <p>Through these trials, Seytek develops the skills and qualities needed to lead his people. He also gathers around him loyal companions who will support him in the struggles to come, forming bonds of friendship and loyalty that mirror those of his father and grandfather.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-trials.jpg" alt="Seytek's Trials">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Leadership and Battles Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Leadership and Battles</h2>
+            <p class="text-center animate-on-scroll">Having proven himself worthy, Seytek takes up the mantle of leadership and faces the challenges that come with it.</p>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-battle.jpg" alt="Seytek in Battle">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>Reclaiming the Homeland</h3>
+                    <p>Seytek's first major challenge is to reclaim his ancestral lands from usurpers and restore justice and prosperity to the Kyrgyz people. This involves both military campaigns against those who refuse to acknowledge his rightful claim and diplomatic efforts to reunite the fragmented tribes.</p>
+                    <p>Like Manas and Semetey before him, Seytek proves to be a formidable warrior and a brilliant strategist. His victories on the battlefield cement his reputation and rally more supporters to his cause, strengthening his position as the legitimate heir to the legacy of Manas.</p>
+                </div>
+            </div>
+            
+            <div class="quote animate-on-scroll">
+                "When Seytek rides into battle, it is as if Manas himself has returned, bringing hope to his people and fear to his enemies."
+            </div>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>External Threats</h3>
+                    <p>Beyond internal conflicts, Seytek must also defend his people against external enemies who threaten the sovereignty and well-being of the Kyrgyz. These campaigns take him to distant lands and bring him into conflict with powerful adversaries, testing his leadership and resolve.</p>
+                    <p>Through these external conflicts, Seytek not only protects his people but also expands their territory and influence, establishing alliances with neighboring peoples and securing a period of peace and prosperity for the Kyrgyz under his rule.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-diplomacy.jpg" alt="Seytek's Diplomacy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Characters Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Key Characters in Seytek's Story</h2>
+            <p class="text-center animate-on-scroll">Seytek is surrounded by a cast of characters who contribute to his journey and development as a leader.</p>
+            
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/aikchurek-older.jpg" alt="Aikchurek" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Aikchurek</h3>
+                        <p class="character-description">Seytek's mother who, like Kanykei before her, protects and guides her son through his early years, ensuring his survival until he can claim his birthright.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kulchoro-older.jpg" alt="Kulchoro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kulchoro</h3>
+                        <p class="character-description">Son of Almambet and loyal companion to Semetey who becomes a mentor and advisor to Seytek, providing guidance and wisdom based on his experiences with previous generations.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/aichuruk.jpg" alt="Aichuruk" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Aichuruk</h3>
+                        <p class="character-description">Seytek's wife, known for her beauty, intelligence, and loyalty. She supports Seytek in his endeavors and plays a crucial role in diplomatic relations with other tribes.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/talas.jpg" alt="Talas" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Talas</h3>
+                        <p class="character-description">Seytek's closest friend and most loyal warrior, who stands by him through all challenges and serves as his right hand in both peace and war.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 5 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kyzyl-surt.jpg" alt="Kyzyl Surt" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kyzyl Surt</h3>
+                        <p class="character-description">Seytek's primary antagonist, a powerful warlord who seeks to destroy the line of Manas once and for all and establish his own dynasty as rulers of the Kyrgyz.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 6 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/janyl-myrza.jpg" alt="Janyl Myrza" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Janyl Myrza</h3>
+                        <p class="character-description">A female warrior and ally to Seytek, known for her exceptional archery skills and tactical brilliance, who leads her own contingent in Seytek's army.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Legacy and Conclusion Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Legacy and Conclusion</h2>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Golden Age of Peace</h3>
+                    <p>After overcoming numerous challenges and defeating powerful enemies, Seytek establishes a golden age of peace and prosperity for the Kyrgyz people. Under his rule, the tribes remain united, the borders are secure, and the people flourish in cultural and economic development.</p>
+                    <p>Seytek is remembered not only as a great warrior like his ancestors but also as a wise and just ruler who brought stability and harmony to his people. His reign marks the fulfillment of the promise begun with Manas and continued through Semetey.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/seytek-prosperity.jpg" alt="Prosperity Under Seytek">
+                </div>
+            </div>
+            
+            <div class="quote animate-on-scroll">
+                "With Seytek, the circle is complete. What Manas began and Semetey continued, Seytek has fulfilled. Three generations, one epic story of courage, sacrifice, and the enduring spirit of the Kyrgyz people."
+            </div>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/epic-conclusion.jpg" alt="Epic Conclusion">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>The Epic's Significance</h3>
+                    <p>The epic trilogy of Manas, Semetey, and Seytek represents more than just a heroic narrative; it embodies the cultural values, historical experiences, and spiritual beliefs of the Kyrgyz people. Through these three generations of heroes, the epic explores themes of national identity, leadership, loyalty, family bonds, and the cyclical nature of history.</p>
+                    <p>As the final part of this monumental trilogy, Seytek's story brings closure to the epic while emphasizing its timeless message: that the spirit of Manas—courage, justice, unity, and resilience—lives on in the Kyrgyz people, inspiring new generations to face their own challenges with the same heroic virtues.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <a href="index.html#resources" class="btn animate-on-scroll">Explore Resources <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Epic Manas</div>
+                    <p class="footer-description">Exploring and preserving the rich cultural heritage of the great Kyrgyz epic poem, one of the world's longest oral epics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="index.html#about">About</a></li>
+                        <li class="footer-link"><a href="index.html#epic-parts">The Epic</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Resources</a></li>
+                        <li class="footer-link"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Epic Parts</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@epicmanas.org">info@epicmanas.org</a></li>
+                        <li class="footer-link"><a href="tel:+996312123456">+996 312 123456</a></li>
+                        <li class="footer-link"><a href="#">Bishkek, Kyrgyzstan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Epic Manas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semetey - The Second Part of Epic Manas</title>
+    <meta name="description" content="Learn about Semetey, the son of Manas and second part of the Epic Manas trilogy from Kyrgyzstan.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Page-specific styles */
+        .hero-banner {
+            height: 500px;
+            background-image: url('images/semetey-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background-color: var(--light-accent);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .section-image {
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .quote {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--primary-color);
+            position: relative;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            background-color: rgba(212, 167, 106, 0.1);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+        
+        .character-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-medium);
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .character-content {
+            padding: var(--spacing-md);
+        }
+        
+        .character-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .character-description {
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <nav class="nav" style="position: fixed; background: var(--primary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Epic Manas</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#epic-parts" class="nav-link">The Epic</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Semetey</h1>
+            <p class="hero-subtitle">The Second Part of the Epic Trilogy</p>
+        </div>
+    </div>
+    
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">The Heir of Manas</h2>
+            <p class="animate-on-scroll">The second part of the Epic Manas trilogy focuses on Semetey, the son of Manas and Kanykei. After his father's death, Semetey must overcome great challenges to reclaim his birthright and continue his father's legacy of unifying and protecting the Kyrgyz people.</p>
+            
+            <div class="quote animate-on-scroll">
+                "The son of the lion is a lion himself. Semetey carries his father's spirit in his heart and his strength in his hands."
+            </div>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Early Life in Exile</h3>
+                    <p>After Manas's death, his widow Kanykei flees with the infant Semetey to her father's land of Bukhara to escape the treachery of Manas's relatives, who seek to usurp power. There, Semetey grows up unaware of his true identity and heritage, raised as the son of a humble shepherd.</p>
+                    <p>Despite his humble upbringing, Semetey exhibits extraordinary strength, courage, and leadership from an early age - traits that hint at his noble bloodline. As he matures, his curiosity about his origins grows, setting the stage for his eventual return to his homeland.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-childhood.jpg" alt="Childhood of Semetey">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Discovery and Return Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Discovery of Identity and Return</h2>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-discovery.jpg" alt="Semetey Learning His Identity">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>Revelation of Heritage</h3>
+                    <p>As Semetey reaches adulthood, his mother Kanykei and Manas's loyal advisor Bakai finally reveal to him the truth about his noble lineage. Learning of his father's heroic deeds and unjust death, Semetey is filled with a desire to return to his homeland, reclaim his birthright, and avenge his father.</p>
+                    <p>This revelation transforms Semetey, giving purpose and direction to his life. He receives his father's legendary weapons and armor, and his famous steed Taibuurul, symbols of his inheritance and the mantle of leadership he must assume.</p>
+                </div>
+            </div>
+            
+            <div class="two-column" style="margin-top: var(--spacing-xl);">
+                <div class="section-text animate-on-scroll">
+                    <h3>Return to Talas</h3>
+                    <p>Accompanied by his mother Kanykei and the wise Bakai, Semetey returns to Talas, his father's homeland. There, he finds that Manas's relatives have seized power and oppressed the people. Semetey must first overcome these internal enemies before he can address external threats.</p>
+                    <p>His return brings hope to the Kyrgyz people, who see in him the return of their great hero Manas. Semetey's arrival marks the beginning of a new era of struggle for unity and freedom for the Kyrgyz people.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-return.jpg" alt="Semetey's Return">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Challenges and Victories Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Battles and Triumphs</h2>
+            <p class="text-center animate-on-scroll">Semetey faces numerous challenges in his quest to restore his father's legacy and unite the Kyrgyz people.</p>
+            
+            <div class="two-column">
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-battle.jpg" alt="Semetey in Battle">
+                </div>
+                <div class="section-text animate-on-scroll">
+                    <h3>Military Campaigns</h3>
+                    <p>Like his father before him, Semetey becomes embroiled in conflicts with external enemies who threaten the Kyrgyz people. He leads campaigns against foreign invaders, displaying the same military genius and personal courage that characterized Manas.</p>
+                    <p>These battles test Semetey's leadership and strengthen his bond with his warriors. Through these trials, he proves himself worthy of his father's legacy and earns the respect and loyalty of both friends and foes.</p>
+                </div>
+            </div>
+            
+            <div class="quote animate-on-scroll">
+                "The enemies who feared Manas now tremble at the name of his son, for the spirit of the father lives on in Semetey."
+            </div>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Personal Challenges</h3>
+                    <p>Beyond the battlefield, Semetey faces personal challenges and internal conflicts. He must navigate complex political relationships, confront betrayal from unexpected quarters, and make difficult choices that test his character and values.</p>
+                    <p>Through these personal trials, Semetey grows not just as a warrior but as a leader and a man. He learns to balance justice with mercy, strength with wisdom, and personal desire with duty to his people.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-council.jpg" alt="Semetey in Council">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Characters Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Key Characters in Semetey's Story</h2>
+            <p class="text-center animate-on-scroll">The epic of Semetey features an array of characters who shape his journey and destiny.</p>
+            
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kanykei-older.jpg" alt="Kanykei" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kanykei</h3>
+                        <p class="character-description">Manas's widow and Semetey's mother, who protects her son in exile and guides him with wisdom and love. Her strength and foresight are crucial to Semetey's survival and success.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 2 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/bakai-older.jpg" alt="Bakai" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Bakai</h3>
+                        <p class="character-description">The wise counselor who served Manas and now guides Semetey with his experience and wisdom. He represents the continuity between father and son and the preservation of Kyrgyz traditions.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 3 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/aikchurek.jpg" alt="Aikchurek" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Aikchurek</h3>
+                        <p class="character-description">Semetey's beautiful and intelligent wife, who possesses magical abilities and supports her husband in his quests. Their love story forms an important subplot in the epic.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 4 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kulchoro.jpg" alt="Kulchoro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kulchoro</h3>
+                        <p class="character-description">Son of Almambet (Manas's close friend) and Semetey's loyal companion, who fights alongside him in many battles. Their friendship mirrors the bond between their fathers.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 5 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/konurbai.jpg" alt="Konurbai" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Konurbai</h3>
+                        <p class="character-description">One of Semetey's main adversaries, who opposed Manas and continues to threaten the Kyrgyz people. His ongoing conflict with the hero's lineage spans generations.</p>
+                    </div>
+                </div>
+                
+                <!-- Character 6 -->
+                <div class="character-card animate-on-scroll">
+                    <img src="images/kanchooro.jpg" alt="Kanchooro" class="character-image">
+                    <div class="character-content">
+                        <h3 class="character-title">Kanchooro</h3>
+                        <p class="character-description">Another of Semetey's companions who eventually betrays him, representing the theme of treachery and the challenges of leadership.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Legacy and Transition Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Legacy and Continuation</h2>
+            
+            <div class="two-column">
+                <div class="section-text animate-on-scroll">
+                    <h3>Semetey's Fate</h3>
+                    <p>Like his father before him, Semetey's life is marked by both triumph and tragedy. After years of leadership and battles, he faces betrayal from unexpected quarters. According to different versions of the epic, Semetey either disappears mysteriously or is forced into exile.</p>
+                    <p>Before his departure, Semetey ensures the safety of his young son Seytek, entrusting him to loyal supporters who will protect and guide him until he comes of age to continue the family legacy.</p>
+                </div>
+                <div class="section-image animate-on-scroll">
+                    <img src="images/semetey-farewell.jpg" alt="Semetey's Farewell">
+                </div>
+            </div>
+            
+            <div class="quote animate-on-scroll">
+                "The tale of Semetey teaches us that a hero's journey is never complete, for each generation must rise to meet its own challenges."
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <a href="seytek.html" class="btn animate-on-scroll">Continue to Seytek <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Epic Manas</div>
+                    <p class="footer-description">Exploring and preserving the rich cultural heritage of the great Kyrgyz epic poem, one of the world's longest oral epics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="index.html#about">About</a></li>
+                        <li class="footer-link"><a href="index.html#epic-parts">The Epic</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Resources</a></li>
+                        <li class="footer-link"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Epic Parts</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@epicmanas.org">info@epicmanas.org</a></li>
+                        <li class="footer-link"><a href="tel:+996312123456">+996 312 123456</a></li>
+                        <li class="footer-link"><a href="#">Bishkek, Kyrgyzstan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Epic Manas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline of Epic Manas - The Great Kyrgyz Epic</title>
+    <meta name="description" content="Explore the chronological timeline of events from the Epic Manas trilogy, spanning three generations of Kyrgyz heroes.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Page-specific styles */
+        .hero-banner {
+            height: 400px;
+            background-image: url('images/timeline-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--white);
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item.right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: var(--spacing-lg);
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 15px;
+            border: 10px solid transparent;
+        }
+
+        .timeline-item.left .timeline-content::before {
+            right: -20px;
+            border-left-color: var(--white);
+        }
+
+        .timeline-item.right .timeline-content::before {
+            left: -20px;
+            border-right-color: var(--white);
+        }
+
+        .timeline-era {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-title {
+            color: var(--heading-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-description {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .timeline-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item.right {
+                left: 0;
+            }
+
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 15px;
+            }
+
+            .timeline-item.left .timeline-content::before,
+            .timeline-item.right .timeline-content::before {
+                left: -20px;
+                border-right-color: var(--white);
+                border-left-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <nav class="nav" style="position: fixed; background: var(--primary-color);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Epic Manas</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#epic-parts" class="nav-link">The Epic</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Timeline of Epic Manas</h1>
+            <p class="hero-subtitle">A chronological journey through the legendary epic</p>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                <p>Follow the chronological progression of events through all three parts of the Epic Manas, from the birth of Manas to the reign of his grandson Seytek.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Part 1: Manas -->
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 1: Manas</div>
+                        <img src="images/manas-birth.jpg" alt="Birth of Manas" class="timeline-image">
+                        <h3 class="timeline-title">Birth of Manas</h3>
+                        <p class="timeline-description">The miraculous birth of Manas to Jakip and Chiyirdi, marked by supernatural signs and prophecies of his future greatness.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 1: Manas</div>
+                        <img src="images/manas-childhood.jpg" alt="Manas's Childhood" class="timeline-image">
+                        <h3 class="timeline-title">Early Signs of Greatness</h3>
+                        <p class="timeline-description">Young Manas shows extraordinary strength and leadership qualities, defeating adult warriors in combat by age nine.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 1: Manas</div>
+                        <img src="images/manas-unification.jpg" alt="Unification of Tribes" class="timeline-image">
+                        <h3 class="timeline-title">Unification of Kyrgyz Tribes</h3>
+                        <p class="timeline-description">Manas unites the forty Kyrgyz tribes, establishing the first Kyrgyz state and becoming their supreme leader.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 1: Manas</div>
+                        <img src="images/manas-marriage.jpg" alt="Marriage to Kanykei" class="timeline-image">
+                        <h3 class="timeline-title">Marriage to Kanykei</h3>
+                        <p class="timeline-description">Manas marries the wise and beautiful Kanykei, who becomes his trusted advisor and the mother of Semetey.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 1: Manas</div>
+                        <img src="images/great-campaign.jpg" alt="The Great Campaign" class="timeline-image">
+                        <h3 class="timeline-title">The Great Campaign</h3>
+                        <p class="timeline-description">Manas leads his army on the Great Campaign, defending Kyrgyz lands and establishing alliances with neighboring peoples.</p>
+                    </div>
+                </div>
+
+                <!-- Part 2: Semetey -->
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 2: Semetey</div>
+                        <img src="images/semetey-birth.jpg" alt="Birth of Semetey" class="timeline-image">
+                        <h3 class="timeline-title">Birth of Semetey</h3>
+                        <p class="timeline-description">Birth of Semetey to Manas and Kanykei, followed by Manas's death and Kanykei's flight to Bukhara with the infant.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 2: Semetey</div>
+                        <img src="images/semetey-return.jpg" alt="Semetey's Return" class="timeline-image">
+                        <h3 class="timeline-title">Return to Talas</h3>
+                        <p class="timeline-description">Semetey returns to his homeland to reclaim his father's legacy and restore justice to the Kyrgyz people.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 2: Semetey</div>
+                        <img src="images/semetey-battles.jpg" alt="Semetey's Battles" class="timeline-image">
+                        <h3 class="timeline-title">Battles and Triumphs</h3>
+                        <p class="timeline-description">Semetey fights numerous battles to defend his people and faces betrayal from within his own ranks.</p>
+                    </div>
+                </div>
+
+                <!-- Part 3: Seytek -->
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 3: Seytek</div>
+                        <img src="images/seytek-childhood.jpg" alt="Young Seytek" class="timeline-image">
+                        <h3 class="timeline-title">Early Life of Seytek</h3>
+                        <p class="timeline-description">After Semetey's disappearance, young Seytek is protected and raised in secret by loyal supporters.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-era">Part 3: Seytek</div>
+                        <img src="images/seytek-legacy.jpg" alt="Seytek's Legacy" class="timeline-image">
+                        <h3 class="timeline-title">Fulfillment of Legacy</h3>
+                        <p class="timeline-description">Seytek completes the mission begun by his grandfather Manas, establishing lasting peace and prosperity for the Kyrgyz people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Epic Manas</div>
+                    <p class="footer-description">Exploring and preserving the rich cultural heritage of the great Kyrgyz epic poem, one of the world's longest oral epics.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="index.html#about">About</a></li>
+                        <li class="footer-link"><a href="index.html#epic-parts">The Epic</a></li>
+                        <li class="footer-link"><a href="index.html#resources">Resources</a></li>
+                        <li class="footer-link"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Epic Parts</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="manas.html">Manas</a></li>
+                        <li class="footer-link"><a href="semetey.html">Semetey</a></li>
+                        <li class="footer-link"><a href="seytek.html">Seytek</a></li>
+                        <li class="footer-link"><a href="characters.html">Characters</a></li>
+                        <li class="footer-link"><a href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:info@epicmanas.org">info@epicmanas.org</a></li>
+                        <li class="footer-link"><a href="tel:+996312123456">+996 312 123456</a></li>
+                        <li class="footer-link"><a href="#">Bishkek, Kyrgyzstan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Epic Manas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
