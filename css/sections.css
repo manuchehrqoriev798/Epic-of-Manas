@@ -588,20 +588,29 @@
     font-size: var(--font-size-lg);
 }
 
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-md);
+}
+
 .location-meta {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-    flex-wrap: wrap;
-    padding: var(--spacing-lg) 0;
-    border-top: 1px solid var(--gray-200);
+    padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--gray-200);
 }
 
+.location-meta i {
+    color: var(--primary-color);
+}
+
 .tourism-details {
-    margin-top: var(--spacing-xl);
-    padding-top: var(--spacing-lg);
+    margin-top: var(--spacing-md);
 }
 
 .tourism-details h4 {
