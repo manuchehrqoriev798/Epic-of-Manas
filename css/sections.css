@@ -786,4 +786,121 @@
     .video-items {
         grid-template-columns: 1fr;
     }
+}
+
+/* References Section */
+.reference-category {
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.reference-category h2 {
+    color: var(--heading-color);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.reference-category h2 i {
+    color: var(--primary-color);
+}
+
+.reference-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.reference-item {
+    padding: var(--spacing-lg);
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-md);
+}
+
+.reference-item h3 {
+    color: var(--heading-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.reference-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reference-item li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.reference-item li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Expandable Content */
+.expandable-content {
+    position: relative;
+}
+
+.preview-content {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.expanded-content {
+    display: none;
+    margin-top: var(--spacing-xl);
+}
+
+.expanded-content.active {
+    display: block;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    padding: var(--spacing-md) var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: 0 auto;
+    transition: color var(--transition-medium);
+}
+
+.expand-btn:hover {
+    color: var(--primary-dark);
+}
+
+.expand-btn i {
+    transition: transform var(--transition-medium);
+}
+
+.expand-btn.active i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .reference-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .reference-category {
+        padding: var(--spacing-lg);
+    }
+    
+    .reference-item {
+        padding: var(--spacing-md);
+    }
 } 

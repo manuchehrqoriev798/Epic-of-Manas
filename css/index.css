@@ -629,22 +629,19 @@
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../images/hero/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    padding: 0 var(--spacing-lg);
+    position: relative;
+    padding: var(--spacing-5xl) 0;
+    background-color: var(--light-accent);
+    overflow: hidden;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 var(--spacing-lg);
 }
 
 .hero-title {

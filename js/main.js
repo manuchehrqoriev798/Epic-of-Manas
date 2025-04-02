@@ -286,6 +286,20 @@ window.openGallery = function(element) {
   document.body.appendChild(modal);
 };
 
+// Expand/Collapse functionality for references section
+function toggleExpand(sectionId) {
+    const expandedContent = document.getElementById(`${sectionId}-expanded`);
+    const expandBtn = expandedContent.previousElementSibling.querySelector('.expand-btn');
+    
+    if (expandedContent.classList.contains('active')) {
+        expandedContent.classList.remove('active');
+        expandBtn.classList.remove('active');
+    } else {
+        expandedContent.classList.add('active');
+        expandBtn.classList.add('active');
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
