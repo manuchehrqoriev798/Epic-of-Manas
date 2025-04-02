@@ -218,6 +218,7 @@
 
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
+    <script src="../js/config.js"></script>
     <script>
         // Dark mode functionality
         const themeToggle = document.getElementById('theme-toggle');
@@ -244,21 +245,36 @@
             }
         });
     </script>
-    <script type="text/javascript">
-      (function(d, t) {
-          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.load({
-              verify: { projectID: '67ed149c3f667703e994044b' },
-              url: 'https://general-runtime.voiceflow.com',
-              versionID: '67ed149c3f667703e994044c',
-              voice: {
-                url: "https://runtime-api.voiceflow.com"
-              }
-            });
-          }
-          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-      })(document, 'script');
+    <script>
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                try {
+                    if (typeof config === 'undefined') {
+                        console.error('Config not loaded');
+                        return;
+                    }
+                    
+                    window.voiceflow.chat.load({
+                        verify: {
+                            projectID: config.voiceflow.projectID,
+                            versionID: config.voiceflow.versionID,
+                            authorization: config.voiceflow.apiKey
+                        },
+                        url: config.voiceflow.runtimeUrl,
+                        headers: {
+                            'vf-project-id': config.voiceflow.projectID,
+                            'Authorization': config.voiceflow.apiKey
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error initializing Voiceflow:', error);
+                }
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
     </script>
 </body>
 </html> 
