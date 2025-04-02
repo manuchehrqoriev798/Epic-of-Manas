@@ -602,29 +602,18 @@
 .tourism-details {
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
 }
 
 .tourism-details h4 {
     font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
     color: var(--heading-color);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.tourism-details h4 i {
-    color: var(--primary-color);
-    font-size: 0.9em;
 }
 
 .tourism-details ul {
     list-style: none;
     padding: 0;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
 }
 
 .tourism-details li {
@@ -641,46 +630,8 @@
     width: 20px;
 }
 
-.tourism-details .essential-tips {
-    background-color: var(--light-accent);
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius-md);
-    margin-bottom: var(--spacing-lg);
-}
-
-.tourism-details .essential-tips h5 {
-    font-size: var(--font-size-lg);
-    color: var(--heading-color);
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.tourism-details .essential-tips h5 i {
-    color: var(--primary-color);
-}
-
-.tourism-details .essential-tips ul {
-    margin-bottom: 0;
-}
-
-.tourism-details .btn-group {
-    display: flex;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-    margin-top: var(--spacing-lg);
-}
-
-/* Remove the travel-tips-box styles as they're no longer needed */
-.travel-tips-box {
-    display: none;
-}
-
 .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-sm);
+    display: inline-block;
     padding: var(--spacing-md) var(--spacing-xl);
     font-size: var(--font-size-base);
     font-weight: 600;
@@ -690,10 +641,7 @@
     background-color: var(--secondary-color);
     color: var(--white);
     transition: all var(--transition-medium);
-}
-
-.btn-secondary i {
-    font-size: 1.1em;
+    margin-top: var(--spacing-lg);
 }
 
 .btn-secondary:hover {
