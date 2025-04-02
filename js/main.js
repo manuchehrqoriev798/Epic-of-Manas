@@ -1,36 +1,7 @@
-// Constants
-const LOCATIONS = [
-  {
-    name: 'Talas Valley',
-    position: { lat: 42.5200, lng: 72.2400 },
-    zoom: 11
-  },
-  {
-    name: 'Ala-Too Mountains',
-    position: { lat: 42.5000, lng: 74.5000 },
-    zoom: 10
-  },
-  {
-    name: 'Issyk-Kul Lake',
-    position: { lat: 42.4500, lng: 77.1500 },
-    zoom: 9
-  },
-  {
-    name: 'Naryn Region',
-    position: { lat: 41.4300, lng: 76.0000 },
-    zoom: 10
-  },
-  {
-    name: 'Suusamyr Valley',
-    position: { lat: 42.2400, lng: 73.3000 },
-    zoom: 11
-  }
-];
-
-// State Management
+// Global Variables
 let currentLocationIndex = 0;
-let map;
-let marker;
+let map = null;
+let marker = null;
 let slideInterval;
 
 // DOM Elements
@@ -170,65 +141,108 @@ function initScrollAnimation() {
 }
 
 // Map Functionality
-window.initMap = function() {
-  const mapOptions = {
-    center: LOCATIONS[0].position,
-    zoom: LOCATIONS[0].zoom,
-    mapTypeId: 'terrain',
-    styles: [
-      {
-        featureType: 'all',
-        elementType: 'geometry',
-        stylers: [{ color: '#ebe3cd' }]
-      },
-      {
-        featureType: 'water',
-        elementType: 'geometry',
-        stylers: [{ color: '#b9d3c2' }]
-      }
-    ]
-  };
+function initMap() {
+    const mapElement = document.getElementById('epic-map');
+    if (!mapElement) return;
 
-  map = new google.maps.Map(document.getElementById('epic-map'), mapOptions);
-  marker = new google.maps.Marker({
-    position: LOCATIONS[0].position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  });
+    const LOCATIONS = [
+        {
+            name: 'Talas Valley',
+            position: [42.5200, 72.2400],
+            zoom: 11
+        },
+        {
+            name: 'Ala-Too Mountains',
+            position: [42.5000, 74.5000],
+            zoom: 10
+        },
+        {
+            name: 'Issyk-Kul Lake',
+            position: [42.4500, 77.1500],
+            zoom: 9
+        },
+        {
+            name: 'Naryn Region',
+            position: [41.4300, 76.0000],
+            zoom: 10
+        },
+        {
+            name: 'Suusamyr Valley',
+            position: [42.2400, 73.3000],
+            zoom: 11
+        }
+    ];
 
-  showLocation(0);
-};
+    try {
+        // Initialize the map
+        map = L.map('epic-map').setView(LOCATIONS[0].position, LOCATIONS[0].zoom);
+        
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
 
-window.showLocation = function(index) {
-  if (!map || !marker) return;
-  
-  currentLocationIndex = index;
-  map.panTo(LOCATIONS[index].position);
-  map.setZoom(LOCATIONS[index].zoom);
-  marker.setPosition(LOCATIONS[index].position);
-  
-  // Update UI
-  document.querySelectorAll('.location-info').forEach(info => {
-    info.classList.remove('active');
-  });
-  document.querySelectorAll('.location-dot').forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-  document.querySelectorAll('.location-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === index);
-  });
-  document.querySelectorAll('.location-info')[index].classList.add('active');
-};
+        // Create custom icon
+        const customIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
 
-window.nextLocation = function() {
-  const nextIndex = (currentLocationIndex + 1) % LOCATIONS.length;
-  showLocation(nextIndex);
-};
+        // Create marker
+        marker = L.marker(LOCATIONS[0].position, { icon: customIcon })
+            .bindPopup(LOCATIONS[0].name)
+            .addTo(map);
 
-window.previousLocation = function() {
-  const prevIndex = (currentLocationIndex - 1 + LOCATIONS.length) % LOCATIONS.length;
-  showLocation(prevIndex);
-};
+        // Location Navigation Functions
+        window.showLocation = function(index) {
+            if (!map || !marker) return;
+            
+            currentLocationIndex = index;
+            const location = LOCATIONS[index];
+            
+            // Update map and marker
+            map.setView(location.position, location.zoom, {
+                animate: true,
+                duration: 1
+            });
+            marker.setLatLng(location.position)
+                .bindPopup(location.name)
+                .openPopup();
+            
+            // Update UI
+            document.querySelectorAll('.location-info').forEach(info => {
+                info.classList.remove('active');
+            });
+            document.querySelectorAll('.location-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.location-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.location-info')[index].classList.add('active');
+        };
+
+        window.nextLocation = function() {
+            const nextIndex = (currentLocationIndex + 1) % LOCATIONS.length;
+            showLocation(nextIndex);
+        };
+
+        window.previousLocation = function() {
+            const prevIndex = (currentLocationIndex - 1 + LOCATIONS.length) % LOCATIONS.length;
+            showLocation(prevIndex);
+        };
+
+        showLocation(0);
+    } catch (error) {
+        console.error('Error initializing map:', error);
+        mapElement.innerHTML = '<div class="map-error">Error loading map. Please try again later.</div>';
+    }
+}
 
 // FAQ Functionality
 window.toggleFaq = function(element) {
@@ -279,5 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initResourceTabs();
   initSmoothScroll();
   initScrollAnimation();
+  initMap(); // Initialize map when DOM is loaded
 });
 

@@ -182,4 +182,15 @@ img {
     width: 100%;
     display: block;
   }
+}
+
+/* Map Error Styles */
+.map-error {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #721c24;
+    margin: 20px 0;
 } 
