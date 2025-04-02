@@ -373,4 +373,93 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  transition: color var(--transition-fast);
+}
+
+.nav.scrolled .theme-toggle {
+  color: var(--text-color);
+}
+
+.theme-toggle:hover {
+  color: var(--secondary-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --heading-color: #ffffff;
+  --primary-color: #D4A76A;  /* Golden Brown */
+  --secondary-color: #FFD700; /* Gold */
+  --light-accent: #2d2d2d;
+  --gray-200: #333333;
+  --gray-600: #cccccc;
+  --white: #ffffff;
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .nav {
+  background-color: var(--bg-color);
+}
+
+body.dark-mode .nav.scrolled {
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .nav-link {
+  color: var(--text-color);
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .dropdown-item {
+  color: var(--text-color);
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: var(--light-accent);
+  color: var(--primary-color);
+}
+
+body.dark-mode .mobile-nav-toggle {
+  color: var(--text-color);
+}
+
+body.dark-mode .nav.scrolled .mobile-nav-toggle {
+  color: var(--text-color);
+}
+
+@media (max-width: 992px) {
+  body.dark-mode .nav-links {
+    background-color: var(--bg-color);
+  }
+
+  body.dark-mode .nav-link {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--gray-200);
+  }
+}
+
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --heading-color: #ffffff;
+    --primary-color: #D4A76A;  /* Golden Brown */
+    --secondary-color: #FFD700; /* Gold */
 } 

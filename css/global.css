@@ -193,4 +193,68 @@ img {
     border-radius: 4px;
     color: #721c24;
     margin: 20px 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--gray-900);
+    color: var(--gray-100);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--secondary-color);
+}
+
+body.dark-mode p {
+    color: var(--gray-200);
+}
+
+body.dark-mode a {
+    color: var(--secondary-color);
+}
+
+body.dark-mode a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .btn {
+    background-color: var(--secondary-color);
+    color: var(--gray-900);
+}
+
+body.dark-mode .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+body.dark-mode .btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--gray-900);
+}
+
+body.dark-mode .btn-outline {
+    background-color: transparent;
+    border: var(--border-width-medium) solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--gray-900);
+}
+
+body.dark-mode .map-error {
+    background-color: var(--gray-800);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
 } 
