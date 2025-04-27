@@ -1,15 +1,21 @@
 /* Page-specific styles for Semetey */
+
+
 .hero-banner {
     height: 500px;
-    background-image: url('../images/semetey-hero.jpg');
+    background-image: url('../images/semetey.png');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Move the center upwards */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+.hero-title {
+    color: white;
+}
 .hero-banner::before {
     content: '';
     position: absolute;

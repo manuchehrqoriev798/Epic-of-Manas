@@ -1,9 +1,21 @@
 /* Index Page Styles */
 
 /* Expandable Content Styles */
-.expandable-content {
-    margin-top: var(--spacing-lg);
+.expandable-content img {
+    display: block;
+    margin: 0 auto;
+    margin-top: -40px; /* Moves the image 20px UP */
 }
+
+.slide-title {
+    color: white;
+}
+
+.hero-title animate-on-scroll {
+    color: brown;
+}
+
+
 
 .preview-content {
     margin-bottom: var(--spacing-xl);
@@ -14,6 +26,7 @@
     margin-top: var(--spacing-lg);
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--border-color);
+    
 }
 
 .expanded-content.active {

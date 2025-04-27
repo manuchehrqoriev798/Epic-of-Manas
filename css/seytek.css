@@ -1,13 +1,17 @@
 /* Page-specific styles for Seytek */
 .hero-banner {
     height: 500px;
-    background-image: url('../images/seytek-hero.jpg');
+    background-image: url('../images/seytek.png');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Move the center upwards */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-title {
+    color: white;
 }
 
 .hero-banner::before {

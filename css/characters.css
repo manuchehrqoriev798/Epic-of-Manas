@@ -23,14 +23,18 @@
 
 /* Main styles */
 .hero-banner {
-    height: 400px;
-    background-image: url('../images/characters-banner.jpg');
+    height: 500px;
+    background-image: url('../images/three-heroes.png');
     background-size: cover;
-    background-position: center;
+    background-position: center 10%; /* Move the center upwards */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-title {
+    color: white;
 }
 
 .hero-banner::before {
