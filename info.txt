@@ -8,12 +8,18 @@ Academic Supervisor:
 - Dr. Kanykei Mukhtarova (Faculty of Manas Studies, UCA)
 
 Development Team:
-- Mustafo: Primary researcher and content coordinator
-- Arisbek: Reference management and academic resources
-- Navras: Multimedia content specialist (photos, videos, books)
-- Manuchehr: Full-stack developer (frontend and backend)
-- Amirbek: Full-stack developer (frontend and backend)
-- Atiyah: UX/UI designer and information architect
+- Mustafo: Primary researcher and content coordinator, worked closely with the design team to ensure content accuracy and educational value, contributed to the overall project structure and narrative flow
+- Arisbek: Reference management and academic resources specialist, collaborated with the design team to integrate scholarly content effectively, helped develop the educational framework
+- Navras: Multimedia content specialist (photos, videos, books), worked alongside Atiyah to create a cohesive visual experience, contributed to the interactive elements
+- Manuchehr: Full-stack developer (frontend and backend), implemented the technical infrastructure and interactive features
+- Amirbek: Full-stack developer (frontend and backend), developed the platform's core functionality and user experience
+- Atiyah: UX/UI designer and information architect, led the design team in creating an intuitive and engaging interface, collaborated with all team members to ensure a cohesive user experience
+
+The development process was highly collaborative, with team members working together across different aspects of the project:
+- Content and Design Integration: Mustafo, Arisbek, Navras, and Atiyah worked together to ensure seamless integration of content and design
+- Technical Implementation: Manuchehr and Amirbek collaborated with the design team to bring the vision to life
+- Quality Assurance: All team members participated in testing and refining the platform
+- Educational Framework: The team collectively developed the learning structure and interactive features
 
 About the Epic of Manas:
 The Epic of Manas is a monumental oral epic poem that serves as the cultural foundation of the Kyrgyz people. With versions containing over 500,000 lines of verse, it stands as one of the world's longest epics. The narrative follows the legendary warrior Manas, who united the scattered Kyrgyz tribes and established the first Kyrgyz state, setting the foundation for Kyrgyz national identity.
