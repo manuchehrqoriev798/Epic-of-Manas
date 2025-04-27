@@ -4,6 +4,10 @@
   padding: var(--spacing-3xl) 0 var(--spacing-xl);
 }
 
+.footer h3 {
+  color: var(--white);
+}
+
 .footer-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;

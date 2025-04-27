@@ -1,0 +1,115 @@
+Epic Manas Educational Project Documentation
+
+Project Overview:
+The Epic Manas Educational Project is a student-led initiative developed under the guidance of Dr. Kanykei Mukhtarova at the Faculty of Manas Studies, University of Central Asia (UCA). This project combines modern technology with traditional knowledge to create an interactive learning platform about the Epic of Manas, one of the world's longest oral epics and a cornerstone of Kyrgyz cultural heritage.
+
+Project Team:
+Academic Supervisor:
+- Dr. Kanykei Mukhtarova (Faculty of Manas Studies, UCA)
+
+Development Team:
+- Mustafo: Primary researcher and content coordinator
+- Arisbek: Reference management and academic resources
+- Navras: Multimedia content specialist (photos, videos, books)
+- Manuchehr: Full-stack developer (frontend and backend)
+- Amirbek: Full-stack developer (frontend and backend)
+- Atiyah: UX/UI designer and information architect
+
+About the Epic of Manas:
+The Epic of Manas is a monumental oral epic poem that serves as the cultural foundation of the Kyrgyz people. With versions containing over 500,000 lines of verse, it stands as one of the world's longest epics. The narrative follows the legendary warrior Manas, who united the scattered Kyrgyz tribes and established the first Kyrgyz state, setting the foundation for Kyrgyz national identity.
+
+Key Aspects of the Epic:
+
+1. Historical and Cultural Significance:
+   - UNESCO-recognized Masterpiece of the Oral and Intangible Heritage of Humanity
+   - Preserves the collective memory and history of the Kyrgyz people
+   - Reflects traditional nomadic lifestyle, customs, and values
+   - Serves as a living tradition, continuously performed and reinterpreted
+   - Chronicles three generations of heroes: Manas, Semetey, and Seytek
+
+2. Narrative Structure:
+   The epic is divided into three main parts:
+   - Manas: The founding hero who unites the Kyrgyz tribes
+   - Semetey: The continuation through Manas's son
+   - Seytek: The final chapter focusing on Manas's grandson
+
+3. Core Themes:
+   - National unity and identity
+   - Heroism and courage
+   - Wisdom and leadership
+   - Family and lineage
+   - Justice and honor
+   - Cultural preservation
+   - Traditional values and customs
+
+Project Objectives:
+1. Educational Goals:
+   - Provide comprehensive learning about the Epic of Manas trilogy
+   - Facilitate understanding of key characters and events
+   - Preserve and promote Kyrgyz cultural heritage
+   - Support academic research and study
+
+2. Technical Features:
+   - Interactive learning platform
+   - Comprehensive character database
+   - Historical and cultural context
+   - Multimedia resources
+   - Educational Q&A system
+   - Reference materials and sources
+
+Target Audience:
+Primary Users:
+- Students of Kyrgyz literature and culture
+- Academic researchers
+- Cultural heritage enthusiasts
+- Educators and teachers
+
+Secondary Users:
+- General public interested in Kyrgyz culture
+- International researchers of oral epics
+- Cultural preservation organizations
+
+Important Disclaimers:
+1. Project Status:
+   - This is an independent student project
+   - Not officially affiliated with or endorsed by UCA
+   - Developed as part of academic coursework
+
+2. Content Guidelines:
+   - Information provided for educational purposes only
+   - Not to be considered official academic material
+   - Users should verify information through primary sources
+   - Content may be updated and revised periodically
+
+3. Development Status:
+   - Entirely student-led initiative
+   - Continuous development and improvement
+   - Open to feedback and suggestions
+   - Regular content verification and updates
+
+Technical Specifications:
+1. Platform Features:
+   - Responsive web design
+   - Interactive chatbot interface
+   - Multimedia content integration
+   - Searchable database
+   - User-friendly navigation
+
+2. Content Management:
+   - Regular updates and maintenance
+   - Quality control procedures
+   - Source verification process
+   - Content review system
+
+Project Vision:
+This initiative represents the students' commitment to:
+- Preserving Kyrgyz cultural heritage
+- Promoting academic understanding
+- Bridging traditional knowledge with modern technology
+- Supporting cultural education
+- Maintaining academic integrity
+- Fostering cultural sensitivity
+
+Contact Information:
+For project inquiries, suggestions, or feedback, please contact:
+https://t.me/manuchehr0
